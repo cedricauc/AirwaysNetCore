@@ -1,0 +1,39 @@
+﻿@using Microsoft.AspNetCore.Http;
+@{
+    var identity = Context.Session.GetString("_Identity");
+}
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow">
+    <div class="container">
+        <a class="navbar-brand" asp-area="" asp-controller="Main" asp-action="Index">STAR AIRWAYS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            <ul class="nav navbar-nav ml-auto">
+                @if (!string.IsNullOrEmpty(identity))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Index">
+                            <span class="fa fa-home"></span> Accueil
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Logout">
+                            <span class="fa fa-user"></span> Se déconnecter
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Admin" asp-action="Index">
+                            <span class="fa fa-user"></span> Admin
+                        </a>
+                    </li>
+                }
+
+            </ul>
+        </div>
+    </div>
+</nav>

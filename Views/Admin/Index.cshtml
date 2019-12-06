@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "ADMINISTRATION DES VOLS";
+}
+
+@await Component.InvokeAsync("Main")
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $(".btn-danger").click(function () {
+                var id = $(this).attr("id");
+                var result = confirm("Supprimer ce vol ?")
+                if (result) {
+                    SendTo(id);
+                }
+                return;
+            });  
+        })
+
+        function SendTo(id) {
+            var port = document.location.port ? (":" + document.location.port) : "";
+            var url = document.location.protocol + "//" + document.location.hostname + port + "/Admin/Delete/" + id;
+            $.get(url, async function () {
+                debugger;
+                window.location.href = await url;
+            });
+        }
+
+    </script>
+}
+
+
+

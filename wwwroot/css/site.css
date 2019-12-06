@@ -1,0 +1,92 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+header {
+    height: 150px;
+    background: url(../img/default.jpg) no-repeat;
+    background-size: cover;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-nav li a {
+    font-size: 1.2em;
+}
+
+
+.promo {
+    color: #04a004;
+}
+
+.complet {
+    color: crimson;
+}
+
+.listevols th,
+.listevols td {
+    text-align: center !important;
+}
+
+.listevols .glyphicon {
+    font-size: 1.4em;
+}
+
+.add {
+    margin: 2rem 0;
+}
